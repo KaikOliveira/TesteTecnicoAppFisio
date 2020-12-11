@@ -44,3 +44,49 @@ export const IconsTop = styled.View`
   background-color: #fff;
   padding: 20px 35px;
 `;
+
+export const ChartConteiner = styled.View`
+  flex: 1;
+  align-items: center;
+  margin-top: 45px;
+`;
+
+export const Bar = styled.View`
+  height: 80px;
+  width: 90%;
+  background-color: #424242;
+  border-radius: 40px;
+  justify-content: center;
+`;
+
+export const PointLeft = styled.View`
+  background-color: #fff;
+  width: 1px;
+  height: 130px;
+  position: absolute;
+  left: 15%;
+`;
+
+export const PointRight = styled.View`
+  background-color: #fff;
+  width: 1px;
+  height: 130px;
+  position: absolute;
+  right: 15%;
+`;
+
+export const LabelLeft = styled.Text`
+  font-size: 16px;
+  color: #00fff0;
+  position: absolute;
+  left: 15%;
+  top: 110px;
+`;
+
+export const LabelRight = styled.Text`
+  font-size: 16px;
+  color: #00fff0;
+  position: absolute;
+  right: 14.6%;
+  top: 110px;
+`;

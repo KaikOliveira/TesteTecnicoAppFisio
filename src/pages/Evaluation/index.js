@@ -15,10 +15,19 @@ import {
   Title, 
   Score,
   ContentConteiner,
-  IconsTop 
+  IconsTop,
+  ChartConteiner,
+  Bar,
+  PointLeft,
+  PointRight,
+  LabelLeft,
+  LabelRight
 } from './styles';
 
 export default function Evaluation(){
+
+  const data = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ];
+
   return(
     <Wrapper>
       <TrainingConteiner>
@@ -53,6 +62,18 @@ export default function Evaluation(){
 
           <FontAwesome5 name="chart-area" size={24} color="#E84A5B" />
         </IconsTop>
+
+        <ChartConteiner>
+          <Bar>
+            <PointLeft />
+
+            <PointRight />
+          </Bar>
+
+          <LabelLeft>3.00kg</LabelLeft>
+          <LabelRight>30.00kg</LabelRight> 
+          
+        </ChartConteiner>
       </ContentConteiner>
     </Wrapper>
   );

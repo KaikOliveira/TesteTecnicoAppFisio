@@ -1,25 +1,40 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import { View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
+import { LineChart, Grid } from 'react-native-svg-charts';
 
 import Evaluation from './pages/Evaluation/index';
+import Teste from './pages/Test/index';
 
-function HomeScreen({ navigation }) {
+
+function HomeScreen() {
+
+  const data = [ 50,  -50];
+  const data2 = [ -50 -50 ];
+
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        onPress={() => navigation.navigate('Notifications')}
-        title="Go to notifications"
-      />
+    <View style={{ flex: 1}}>
+
+      <LineChart
+        style={{ height: 150 }}
+        data={ data}
+        svg={{ stroke: 'rgb(134, 65, 244)' }}
+        contentInset={{  top: 20, bottom: 20 }}
+      >
+        <Grid />
+
+      </LineChart>
+      
     </View>
   );
 }
 
-function NotificationsScreen({ navigation }) {
+function NotificationsScreen() {
+
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#424242' }}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
+    <View>
+        
     </View>
   );
 }
@@ -34,6 +49,7 @@ export default function Router() {
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
         <Drawer.Screen name="Evaluation" component={Evaluation} />
+        <Drawer.Screen name="Teste" component={Teste} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
