@@ -5,7 +5,8 @@ import {
   MaterialCommunityIcons, 
   Feather, 
   Ionicons,
-  FontAwesome5
+  FontAwesome5,
+  MaterialIcons
 } from '@expo/vector-icons';
 
 import { 
@@ -21,7 +22,9 @@ import {
   PointLeft,
   PointRight,
   LabelLeft,
-  LabelRight
+  LabelRight,
+  TimerConteiner,
+  Timer,
 } from './styles';
 
 export default function Evaluation(){
@@ -70,8 +73,13 @@ export default function Evaluation(){
 
           <LabelLeft>3.00kg</LabelLeft>
           <LabelRight>30.00kg</LabelRight> 
-
         </ChartConteiner>
+
+        <TimerConteiner>
+          <MaterialIcons name="timer" size={24} color="#E84A5B" />
+          <Timer>00m 00s</Timer>
+        </TimerConteiner>
+
       </ContentConteiner>
     </Wrapper>
   );

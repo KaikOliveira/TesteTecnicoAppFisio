@@ -34,7 +34,7 @@ export const Score = styled.Text`
 `;
 
 export const ContentConteiner = styled.View`
-  background:#c0c0c0;
+  background:#fff;
   flex: 1;
 `;
 
@@ -46,7 +46,6 @@ export const IconsTop = styled.View`
 `;
 
 export const ChartConteiner = styled.View`
-  flex: 1;
   align-items: center;
   margin-top: 45px;
 `;
@@ -54,13 +53,13 @@ export const ChartConteiner = styled.View`
 export const Bar = styled.View`
   height: 80px;
   width: 90%;
-  background-color: #424242;
+  background-color: #D4D4D4;
   border-radius: 40px;
   justify-content: center;
 `;
 
 export const PointLeft = styled.View`
-  background-color: #fff;
+  background-color: #444;
   width: 1px;
   height: 130px;
   position: absolute;
@@ -68,7 +67,7 @@ export const PointLeft = styled.View`
 `;
 
 export const PointRight = styled.View`
-  background-color: #fff;
+  background-color: #444;
   width: 1px;
   height: 130px;
   position: absolute;
@@ -77,7 +76,7 @@ export const PointRight = styled.View`
 
 export const LabelLeft = styled.Text`
   font-size: 16px;
-  color: #00fff0;
+  color: #444;
   position: absolute;
   left: 15%;
   top: 110px;
@@ -85,8 +84,21 @@ export const LabelLeft = styled.Text`
 
 export const LabelRight = styled.Text`
   font-size: 16px;
-  color: #00fff0;
+  color: #444;
   position: absolute;
   right: 14.6%;
   top: 110px;
+`;
+
+export const TimerConteiner = styled.View`
+  top: 130px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+`;
+
+export const Timer = styled.Text`
+  margin-left: 8px;
+  font-size: 22px;
+  color: #444;
 `;
