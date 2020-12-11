@@ -26,8 +26,6 @@ import {
 
 export default function Evaluation(){
 
-  const data = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ];
-
   return(
     <Wrapper>
       <TrainingConteiner>
@@ -72,7 +70,7 @@ export default function Evaluation(){
 
           <LabelLeft>3.00kg</LabelLeft>
           <LabelRight>30.00kg</LabelRight> 
-          
+
         </ChartConteiner>
       </ContentConteiner>
     </Wrapper>
