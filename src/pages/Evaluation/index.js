@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FlatList } from 'react-native';
 
 import { 
   FontAwesome, 
@@ -25,9 +26,66 @@ import {
   LabelRight,
   TimerConteiner,
   Timer,
+  ExerciseListConteiner,
+  ButtonExercise,
+  TitleExercise,
+  EndContentCenter
 } from './styles';
 
 export default function Evaluation(){
+
+  // Dados do FlatList -- Lista de Exercicios
+  const DATA = [
+    {
+      id: "1",
+      title: "Abdominal",
+    },
+    {
+      id: "2",
+      title: "Flexão de cotovelo",
+    },
+    {
+      id: "3",
+      title: "Pular corda",
+    },
+    {
+      id: "4",
+      title: "Agachamento",
+    },
+    {
+      id: "5",
+      title: "Elevação de quadril",
+    },
+    {
+      id: "6",
+      title: "Ponte",
+    },
+    {
+      id: "7",
+      title: "Elevação das pontas dos pés",
+    },
+    
+  ];
+
+  const Item = ({ item, onPress, style }) => (
+    <ButtonExercise onPress={onPress} style={ style} >
+      <TitleExercise >{item.title}</TitleExercise>
+    </ButtonExercise>
+  );
+
+  const [selectedId, setSelectedId] = useState(null);
+
+  const renderItem = ({ item }) => {
+    const backgroundColor = item.id === selectedId ? "#b1b1b1" : "#e9e9e9";
+
+    return (
+      <Item
+        item={item}
+        onPress={() => setSelectedId(item.id)}
+        style={{ backgroundColor }}
+      />
+    );
+  };
 
   return(
     <Wrapper>
@@ -81,6 +139,20 @@ export default function Evaluation(){
         </TimerConteiner>
 
       </ContentConteiner>
+
+      <EndContentCenter>
+
+        <ExerciseListConteiner>
+            <FlatList
+              data={DATA}
+              renderItem={renderItem}
+              keyExtractor={(item) => item.id}
+              extraData={selectedId}
+            />
+          </ExerciseListConteiner>
+
+      </EndContentCenter>
     </Wrapper>
+
   );
 }

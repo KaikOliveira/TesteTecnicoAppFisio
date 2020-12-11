@@ -1,8 +1,9 @@
 import styled from 'styled-components/native';
 
 export const Wrapper = styled.SafeAreaView`
-  background:#e5e5e5;
+  background:#f9f9f9;
   flex:1 ;
+  justify-content: space-between;
 `;
 
 export const TrainingConteiner = styled.View`
@@ -34,14 +35,14 @@ export const Score = styled.Text`
 `;
 
 export const ContentConteiner = styled.View`
-  background:#fff;
-  flex: 1;
+  background:#f9f9f9;
+  flex: 1
 `;
 
 export const IconsTop = styled.View`
   justify-content: space-between;
   flex-direction: row;
-  background-color: #fff;
+  background-color: #f9f9f9;
   padding: 20px 35px;
 `;
 
@@ -102,3 +103,34 @@ export const Timer = styled.Text`
   font-size: 22px;
   color: #444;
 `;
+
+export const EndContentCenter = styled.View`
+  align-items: center;
+  flex: 1;
+  bottom: 7.8%;
+`;
+
+export const ExerciseListConteiner = styled.View`
+  background-color: #fff;
+  height: 200px;
+  width: 90%;
+  padding: 2px;
+  border-radius: 10px;
+`;
+
+export const ButtonExercise = styled.TouchableOpacity`
+  margin-bottom: 7px;
+  margin-left: 3px;
+  width: 98%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const TitleExercise = styled.Text`
+  font-size: 25px;
+  color: #000;
+`;
+
+
