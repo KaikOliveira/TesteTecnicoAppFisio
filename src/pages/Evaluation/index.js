@@ -76,7 +76,7 @@ export default function Evaluation(){
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#b1b1b1" : "#e9e9e9";
+    const backgroundColor = item.id === selectedId ? "#E84A5B" : "#e9e9e9";
 
     return (
       <Item
