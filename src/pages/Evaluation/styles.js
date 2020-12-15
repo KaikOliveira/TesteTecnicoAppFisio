@@ -18,7 +18,7 @@ export const TrainingConteiner = styled.View`
   border-color: #555;
 `;
 
-export const Itens = styled.View`
+export const Itens = styled.TouchableOpacity`
   align-items: center;
 `;
 
@@ -133,4 +133,28 @@ export const TitleExercise = styled.Text`
   color: #000;
 `;
 
+export const Buttons = styled.View`
+  justify-content: space-between;
+  flex-direction: row;
+  bottom:2%;
+  padding: 5px;
+`;
 
+export const Button = styled.TouchableOpacity`
+  height: 50px;
+  width: 43.5%;
+  margin: 0 15px;
+  border-radius: 20px;
+  background-color: #E84A5B;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
+export const NameButton = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 10px;
+`;

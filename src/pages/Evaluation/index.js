@@ -7,7 +7,8 @@ import {
   Feather, 
   Ionicons,
   FontAwesome5,
-  MaterialIcons
+  MaterialIcons,
+  Entypo
 } from '@expo/vector-icons';
 
 import { 
@@ -29,7 +30,10 @@ import {
   ExerciseListConteiner,
   ButtonExercise,
   TitleExercise,
-  EndContentCenter
+  EndContentCenter,
+  Buttons,
+  Button,
+  NameButton
 } from './styles';
 
 export default function Evaluation(){
@@ -151,7 +155,21 @@ export default function Evaluation(){
             />
           </ExerciseListConteiner>
 
+                  
+
       </EndContentCenter>
+
+      <Buttons>
+          <Button>
+            <FontAwesome name="play" size={24} color="#fff" />
+            <NameButton>Iniciar</NameButton>
+          </Button>
+
+          <Button>
+            <Entypo name="line-graph" size={24} color="#fff" />
+            <NameButton>Relatorios</NameButton>
+          </Button>
+        </Buttons>
     </Wrapper>
 
   );
