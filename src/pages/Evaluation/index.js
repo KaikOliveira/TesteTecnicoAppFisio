@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, StatusBar } from 'react-native';
 
 import { 
   FontAwesome, 
@@ -13,6 +13,8 @@ import {
 
 import { 
   Wrapper,
+  Header,
+  IconHeader,
   TrainingConteiner, 
   Itens, 
   Title, 
@@ -93,6 +95,16 @@ export default function Evaluation(){
 
   return(
     <Wrapper>
+        <Header>
+            <IconHeader>
+              <Entypo name="menu" size={32} color="#fff" />
+            </IconHeader>
+
+            <IconHeader>
+              <FontAwesome name="arrow-left" size={29} color="#fff" />
+            </IconHeader>
+        </Header>
+      
       <TrainingConteiner>
         <Itens>
           <FontAwesome name="flag" size={24} color="#E84A5B" />

@@ -6,6 +6,17 @@ export const Wrapper = styled.SafeAreaView`
   justify-content: space-between;
 `;
 
+export const Header = styled.View`
+  height: 80px;
+  background:#E84A5B;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+`;
+
+export const IconHeader = styled.TouchableOpacity``;
+
 export const TrainingConteiner = styled.View`
   height: 100px;
   background-color: #fff;
@@ -107,12 +118,11 @@ export const Timer = styled.Text`
 export const EndContentCenter = styled.View`
   align-items: center;
   flex: 1;
-  bottom: 7.8%;
 `;
 
 export const ExerciseListConteiner = styled.View`
   background-color: #fff;
-  height: 200px;
+  height: 280px;
   width: 90%;
   padding: 2px;
   border-radius: 10px;
